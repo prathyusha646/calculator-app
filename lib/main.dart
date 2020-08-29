@@ -68,17 +68,33 @@ class _MyHomePageState extends State<MyHomePage> {
       if (operand == "/") {
         _output = (num1 / num2).toString();
       }
-      print(_output);
-      num1 = 0.0;
-      num2 = 0.0;
-      operand = "";
+      print(num1.toString() +
+          " " +
+          operand +
+          " " +
+          num2.toString() +
+          " = " +
+          _output);
     } else {
       _output = _output + buttonText;
       print(_output);
     }
 
     setState(() {
-      output = double.parse(_output).toStringAsFixed(2);
+      if (buttonText == "=") {
+        output = num1.toString() +
+            " " +
+            operand +
+            " " +
+            num2.toString() +
+            " = " +
+            _output;
+        num1 = 0.0;
+        num2 = 0.0;
+        operand = "";
+      } else {
+        output = double.parse(_output).toStringAsFixed(0);
+      }
     });
   }
 

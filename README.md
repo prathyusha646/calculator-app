@@ -9,4 +9,4 @@ Calculator app in flutter, practice version.
 - :black_square_button: Computations like sqrt, log, etc.
 
 <br/>
-![App Interface Version 1](/UI/V1.PNG "App Interface Version 1")
+![App Interface Version 1](/UI/V1.PNG)
